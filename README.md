@@ -6,6 +6,7 @@ This project is a backend service that scrapes articles from the [BBC News websi
 
 - [Features](#features)
 - [Requirements](#requirements)
+- [Usage](#usage)
 
 ## Features
 
@@ -30,3 +31,19 @@ This project is a backend service that scrapes articles from the [BBC News websi
 - `flask-cors`
 - `mysql-connector-python`
 - `webdriver-manager`
+
+## Usage
+
+The scraper uses Selenium to scrape articles from BBC News. It extracts the title, summary, URL, publication date, and category. Some articles have either an internal or external link; both cases are handled.
+
+To run the scraper and start the API:
+
+1. Run the main script:
+
+python main.py
+
+Note:
+
+The main.py file initializes the database, runs the scraper, and then starts the Flask API.
+
+For testing the API without waiting for scraping, you can comment out the scrape_bbc_news() call in main.py.
